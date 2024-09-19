@@ -1,0 +1,179 @@
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.grid {
+    width: 80%;
+    max-width: 500px;
+    height: 60vh;
+    max-height: 500px;
+    background-image: url('background.png');
+    position: relative;
+    font-size: 100px;
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+.doodler {
+    width: 87px;
+    height: 85px;
+    background-image: url('doodler-guy.png');
+    position: absolute;
+}
+
+.platform {
+    width: 85px;
+    height: 15px;
+    background-image: url('platform.png');
+    position: absolute;
+}
+
+.moving-platform {
+    animation: movePlatform 2s linear infinite;
+}
+
+@keyframes movePlatform {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(200px);
+
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 500px;
+
+
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+select {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 24px;
+    z-index: 20;
+}
+
+.start-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    background-color: #fff;
+    border: 2px solid #000;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* 
+.choose-difficulty {
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    flex-direction: column;
+}
+
+.change-difficulty-button {
+    height: 10vh;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.new-game-button {
+    height: 10vh;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.difficulty-select {
+    font-family: 'Gloria Hallelujah', cursive;
+} */
+
+.choose-difficulty {
+    font-family: 'Gloria Hallelujah', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    /* Space between elements */
+}
+
+.change-difficulty-button,
+.new-game-button {
+    height: 10vh;
+    width: 80%;
+    /* Adjust the width as needed */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.2rem;
+    color: #fff;
+    /* Text color */
+    background-color: #007bff;
+    /* Button color */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    /* Center the text */
+}
+
+.change-difficulty-button:hover,
+.new-game-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.difficulty-select {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #007bff;
+    width: 80%;
+    /* Adjust width as needed */
+}

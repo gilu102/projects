@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doodle Jump</title>
+    <link rel="stylesheet" href="doodleGame.css">
+</head>
+
+<body>
+    <div class="grid">
+        <div class="start-screen">
+            <h1>Welcome to Doodle Jump!</h1>
+            <button class="start-button">Start Game</button>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="button new-game-button hidden">New Game</button>
+        <div class="choose-difficulty">
+            <button class="button change-difficulty-button hidden">Change Difficulty</button>
+            <select class="difficulty-select hidden">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+    <script src="doodleGame.js"></script>
+</body>
+
+</html>

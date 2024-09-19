@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item1 {
+    background-color: #fdbd03;
+    width: 18vw;
+    height: 1vw;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+img {
+    width: 25vw;
+    height: 40vw;
+}
+
+.img20 {
+    width: 50px;
+    height: 50px;
+    background-color: #fdbd03;
+    border-radius: 100vw;
+    margin-top: 4vw;
+
+}
+
+.img2 {
+    width: 50px;
+    height: 50px;
+    background-color: #fdbd03;
+    border-radius: 100vw;
+    margin-top: 4vw;
+}
+
+.container {
+    margin-right: 20vw;
+    margin-left: 20vw;
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.input1 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+}
+
+.input3 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+    margin-right: 1vw;
+}
+
+.input2 {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+    opacity: 1;
+}
+
+.inputs {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.content {
+    text-align: end;
+
+}
+
+.content>h1 {
+    font: normal normal 900 66px/97px Heebo;
+    letter-spacing: 0px;
+    color: #FDBD03;
+    opacity: 1;
+}
+
+.content>p {
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+    opacity: 1;
+}
+
+.form {
+    width: 30vw;
+    height: 20vw;
+}
+
+button {
+    margin-top: 2vw;
+    width: 166px;
+    height: 50px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #000000;
+    opacity: 1;
+    border: 0;
+}
+
+#name {
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 7vh;
+    width: 20vw;
+    border: 0 solid #FDBD03;
+    border-bottom-width: 0.5vw;
+    border-color: #FDBD03;
+}
+
+#email {
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 7vh;
+    width: 20vw;
+    border: 0 solid #FDBD03;
+    border-bottom-width: 0.5vw;
+    border-color: #FDBD03;
+}
+
+#experience {
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+    border-bottom-width: 0.5vw;
+    width: 41vw;
+    height: 10vw;
+    border: 0 solid #FDBD03;
+    border-bottom-width: 0.5vw;
+    border-color: #FDBD03;
+}
+
+.a {
+    width: 50vw;
+    height: 1vw;
+    background-color: #FDBD03;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    justify-content: space-around;
+    width: 30vw;
+}
+
+@media (max-width:768px) {
+    .img20 {
+        display: none;
+    }
+
+    .item1 {
+        width: 80vw;
+        height: 1vh;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: 9vh;
+    }
+
+    .form {
+        width: 100vw;
+        text-align: center;
+    }
+
+    .content {
+        text-align: center;
+        margin: 5vh 5vw 0 5vw
+    }
+
+    .content>h1 {
+        font-size: 3rem;
+    }
+
+    .content>p {
+        font-size: 1rem;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .input1,
+    .input3,
+    .input2 {
+        width: 90vw;
+        margin-top: 2vh;
+        font-size: 1rem;
+    }
+
+    #name,
+    #email {
+        width: 90vw;
+        height: 7vh;
+
+    }
+
+    #experience {
+        width: 90vw;
+        height: 20vh;
+    }
+
+    button {
+        width: 90vw;
+        height: 7vh;
+    }
+
+    .icons {
+        margin-top: 80vh;
+        width: 100vw;
+    }
+
+    .a {
+        width: 100vw;
+        height: 2vh;
+    }
+
+
+
+
+
+}

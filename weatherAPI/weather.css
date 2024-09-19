@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #89f7ef 0%, #66a6ff 100%), url("weather.gif") no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.container {
+    height: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfefe;
+    opacity: 0.9;
+    border-radius: 20px;
+    box-shadow: 20px 20px 10px rgb(82 32 32 / 20%);
+    margin-bottom: 20px;
+}
+
+input {
+    border-radius: 20px;
+    padding: 5px 10px;
+
+    &:focus {
+        outline-color: rgb(48, 219, 48);
+    }
+}
+
+#weatherInfo {
+    height: 250px;
+    text-align: center;
+    color: #f7fafc;
+    background-color: rgb(48, 219, 48);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-block: 10px;
+}
+
+button {
+    width: 5vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #30e430;
+}

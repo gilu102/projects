@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background-color: #555;
+    height: 8vh;
+    box-shadow: 0 0 1vw black;
+}
+
+.img1 {
+    width: 4vw;
+    height: auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+}
+
+.fullname {
+    margin-left: 1vw;
+    font-family: "Brush Script MT", cursive;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+
+ul>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1vw;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    padding: 1vh;
+    width: auto;
+}
+
+ul>li {
+    list-style-type: none;
+}
+
+.list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+ul>li>a:hover {
+    background-color: #f8f9fa;
+    color: green;
+    transition: 0.25s;
+}
+
+.program {
+    margin-top: 2vh;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.program>a {
+    height: auto;
+}
+
+.program>a>img {
+    width: 7vw;
+    height: 12vh;
+}
+
+.container2 {
+    margin-top: 4vh;
+    background-color: #eaecec;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh 5vw;
+}
+
+.img2 {
+    width: 27vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 40vw;
+}
+
+.but1,
+.but2 {
+    border-radius: 40px;
+    text-decoration: none;
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.but1 {
+    background-color: aqua;
+}
+
+.but2 {
+    background-color: rgb(251, 251, 54);
+}
+
+.rights {
+    height: auto;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vh 5vw;
+}
+
+@media (max-width: 1200px) {
+
+    .list {
+        width: 50vw;
+    }
+
+    .img2 {
+        width: 35vw;
+    }
+
+    .buttons {
+        width: 50vw;
+    }
+
+    .but1,
+    .but2 {
+        width: 18vw;
+        font-size: 1.4rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container2 {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .img2 {
+        width: 60vw;
+        height: auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .but1,
+    .but2 {
+        width: 50vw;
+        margin: 1vh 0;
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh 2vw;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img2 {
+        width: 80vw;
+    }
+
+    .but1,
+    .but2 {
+        width: 60vw;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,559 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ button {
+     cursor: pointer;
+ }
+
+ .profile {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     width: 22vw;
+ }
+
+ .container1 {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 5vw 0 5vw;
+     background-color: #555;
+ }
+
+ .fullname {
+     font-family: "Brush Script MT", cursive;
+     font-size: 3rem;
+     color: rgb(255, 255, 255);
+ }
+
+ .img1 {
+     width: 6vw;
+     height: 6vw;
+ }
+
+ .main {
+     width: 8vw;
+     height: 6vw;
+     background-color: green;
+     color: rgb(255, 255, 255);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 2rem;
+ }
+
+ ul>li {
+     list-style-type: none;
+ }
+
+ .list {
+     display: flex;
+     flex-direction: row-reverse;
+     justify-content: space-between;
+     align-items: center;
+     width: 40vw;
+ }
+
+ ul>li>a {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 1vw;
+     color: rgb(255, 255, 255);
+     font-size: 2rem;
+     text-decoration: none;
+     height: 6vw;
+     width: 10vw;
+ }
+
+ ul>li>a:hover {
+     background-color: #f8f9fa;
+     color: green;
+     transition: 0.25s;
+ }
+
+ .bar1 {
+     width: 100vw;
+     height: 0.5vw;
+     background-color: cyan;
+ }
+
+ .projectsfolder {
+     width: 100vw;
+     height: 70vh;
+     background: linear-gradient(120deg, #89f7ef 0%, #94bef8 100%), url("sea.png");
+     background-blend-mode: multiply;
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .projectsfolder>h1 {
+     font: 6rem heebo;
+     color: white;
+ }
+
+ .projectsfolder>p {
+     font: 3rem heebo;
+     color: rgb(253, 253, 253);
+     text-align: center;
+ }
+
+ .programminglanguages {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .program {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     width: 50vw;
+ }
+
+ .programminglanguages>a {
+     transition: width 2s, height 4s;
+ }
+
+ #about {
+     border-radius: 2vw;
+     height: 50vh;
+     background-color: darkgrey;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     padding: 0 10vw 0 10vw;
+ }
+
+ #about>h1 {
+     font: 4rem heebo;
+     color: #fff;
+ }
+
+ #about>p {
+     font: 2rem heebo;
+     color: #fff;
+     text-align: center;
+ }
+
+ .projectsinfo {
+     margin-top: 10vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .projectsinfo>h1 {
+     font-size: 3rem;
+     font-family: heebo, arial;
+ }
+
+ .projectsinfo>p {
+     font-size: 1rem;
+     font-family: heebo, arial;
+     margin-top: 1vh;
+     margin-bottom: 10vh;
+ }
+
+ .freetrial {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('freetrial(2).png');
+     background-size: cover;
+ }
+
+ .thewayforward {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('thewayforward(2).png');
+     background-size: cover;
+ }
+
+ .exploreTheWorld {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('exploretheworld(2).png');
+     background-size: cover;
+ }
+
+ .coffee {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('coffee(2).png');
+     background-size: cover;
+ }
+
+ .anewpath {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('anewpath(2).png');
+     background-size: cover;
+ }
+
+ .herenow {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('hereandnow.png');
+     background-size: cover;
+ }
+
+ .button {
+     width: 13vw;
+     height: 6vh;
+     background-color: aqua;
+     border: 0;
+     border-radius: 50px;
+     font-family: 'heebo', arial;
+     font-size: 1rem;
+     line-height: 1.6;
+     font-weight: 700;
+ }
+
+ .texturecard {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+     height: 45vh;
+     width: 20vw;
+     box-shadow: 0 0 1vw #555;
+     border-radius: 10px;
+     text-decoration: none;
+     background-color: rgb(253, 242, 242);
+ }
+
+ a>h1 {
+     font-size: 1rem;
+     font-family: heebo, arial;
+ }
+
+ .cards1 {
+     display: flex;
+     flex-direction: row-reverse;
+     margin-left: 10vw;
+     margin-right: 10vw;
+     justify-content: space-between;
+     margin-top: 2vh;
+ }
+
+ .cards1-5 {
+     display: flex;
+     flex-direction: row-reverse;
+     margin-left: 10vw;
+     margin-right: 10vw;
+     justify-content: space-between;
+ }
+
+ .cards2 {
+     margin-top: 10vh;
+     display: flex;
+     flex-direction: row-reverse;
+     margin-left: 10vw;
+     margin-right: 10vw;
+     justify-content: space-between;
+     margin-bottom: 2vh;
+ }
+
+ #contact {
+     margin-top: 10vh;
+     background-color: #555;
+     width: 100vw;
+     height: 90vh;
+ }
+
+ .img3 {
+     position: absolute;
+     width: 40vw;
+     height: 60vh;
+ }
+
+ .initials {
+     margin-top: 10vh;
+     margin-right: 10vw;
+     display: flex;
+     flex-direction: column;
+     align-items: end;
+     color: #fff;
+     font-family: heebo, arial;
+ }
+
+ .initials>h1 {
+     margin-top: 10vh;
+     margin-bottom: 3vh;
+ }
+
+ .input {
+     direction: rtl;
+     display: flex;
+     flex-direction: column;
+     color: #fff;
+     font-family: heebo, arial;
+     margin-top: 2vh;
+ }
+
+ #name,
+ #email,
+ #phone {
+     width: 20vw;
+     height: 5vh;
+     border: 0 solid cyan;
+     border-bottom-width: 0.5vh;
+ }
+
+ #massage {
+     width: 20vw;
+     height: 12vh;
+     border: 0 solid cyan;
+     border-bottom-width: 0.5vh;
+ }
+
+ #button {
+     margin-top: 2vw;
+     width: 166px;
+     height: 50px;
+     background: cyan 0% 0% no-repeat padding-box;
+     opacity: 1;
+     font: normal normal bold 22px/30px Heebo;
+     letter-spacing: 0.33px;
+     color: #000000;
+     opacity: 1;
+     border: 0;
+     border-radius: 50px;
+ }
+
+ .iconcontact {
+     height: 20vh;
+     background-color: cyan;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     padding: 0 10vw 0 10vw;
+     align-items: center;
+ }
+
+ .rights {
+     background-color: #000000;
+     color: #fff;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .projectsCenter {
+     height: 110vh;
+     margin-right: 2vw;
+     margin-left: 2vw;
+     box-shadow: 0 0 1vw #555;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     background-color: rgb(242, 234, 234);
+ }
+
+ .playCenter {
+     margin-top: 19vh;
+     height: 180vh;
+     margin-right: 2vw;
+     margin-left: 2vw;
+     box-shadow: 0 0 1vw #555;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     background-color: rgb(242, 234, 234);
+ }
+
+ .playCenterProjects {
+     font: normal normal bold 22px/30px Heebo;
+     margin-left: 43%;
+     font-size: 2rem;
+ }
+
+ .calculator {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 200553.png');
+     background-size: cover;
+ }
+
+ .doodleGame {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 200818.png');
+     background-size: cover;
+ }
+
+ .tetrisGame {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 200946.png');
+     background-size: cover;
+ }
+
+ .weatherApi {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/weatherAPIbackground.png');
+     background-size: cover;
+ }
+
+ .shoppingCart {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 201952.png');
+     background-size: cover;
+ }
+
+ .guessTheNum {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 201146.png');
+     background-size: cover;
+ }
+
+ .manageU {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 201511.png');
+     background-size: cover;
+ }
+
+ .myAccount {
+     width: 20vw;
+     height: 20vh;
+     background-image: url('jsPictures/Screenshot 2024-09-13 201741.png');
+     background-size: cover;
+ }
+
+ /* Media Queries for Responsiveness */
+ @media (max-width: 1200px) {
+     .list {
+         width: 50vw;
+     }
+
+     .program {
+         width: 80vw;
+     }
+
+     .projectsfolder>h1 {
+         font-size: 4.5rem;
+     }
+
+     .texturecard {
+         width: 40vw;
+     }
+
+     .cards1,
+     .cards2,
+     .cards1-5 {
+         flex-direction: column;
+         align-items: center;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .container1 {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .profile {
+         display: none;
+     }
+
+     .list {
+         width: 100vw;
+         flex-direction: column;
+     }
+
+     ul>li>a {
+         font-size: 1.5rem;
+         width: 80%;
+         height: auto;
+     }
+
+     .program {
+         flex-direction: column;
+         width: 100%;
+     }
+
+     .texturecard {
+         width: 80vw;
+     }
+
+     #name,
+     #email,
+     #phone,
+     #massage {
+         width: 80vw;
+     }
+
+     #button {
+         width: 80vw;
+     }
+
+     .initials {
+         margin: 2vh 10vw;
+     }
+ }
+
+ @media (max-width: 480px) {
+     .container1 {
+         flex-direction: column;
+         padding: 10px;
+     }
+
+     .list {
+         width: 100%;
+         flex-direction: column;
+     }
+
+     ul>li>a {
+         font-size: 1.2rem;
+     }
+
+     .projectsfolder>h1 {
+         font-size: 3rem;
+     }
+
+     .cards1,
+     .cards2,
+     .cards1-5 {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     .texturecard {
+         width: 90vw;
+         margin-bottom: 20px;
+     }
+
+     #name,
+     #email,
+     #phone,
+     #massage {
+         width: 90vw;
+     }
+
+     #button {
+         width: 90vw;
+     }
+
+     .initials {
+         margin: 1vh 5vw;
+     }
+
+     .img3 {
+         width: 80vw;
+         height: auto;
+     }
+ }

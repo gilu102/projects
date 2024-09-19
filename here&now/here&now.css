@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 44vw;
+    background: transparent linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%) 0% 0% no-repeat padding-box;
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 7vw 0 0 0;
+}
+
+.header {
+    text-align: center;
+    font: normal normal normal 160px/231px Satisfy;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 36px #00000087;
+}
+
+.forms>h1 {
+    text-align: center;
+    font: normal normal normal 32px/38px Varela Round;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.forms>p {
+    text-align: center;
+    font: normal normal normal 16px/20px Varela Round;
+    letter-spacing: 0px;
+    color: #F9F9F9;
+    opacity: 1;
+    margin-top: 1vw;
+}
+
+.input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 2vw;
+    margin-left: 16vw;
+    margin-right: 16vw;
+}
+
+.initials {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font: normal normal normal 16px/20px Varela Round;
+    letter-spacing: 0px;
+    color: #F9F9F9;
+    opacity: 1;
+    direction: rtl;
+}
+
+#name {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    opacity: 1;
+    width: 25vw;
+    height: 3vw;
+}
+
+#email {
+    background: #F6F6F624 0% 0% no-repeat padding-box;
+    border: 2px solid #FFFFFF;
+    opacity: 1;
+    width: 25vw;
+    height: 3vw;
+}
+
+#button {
+    height: 3vw;
+    width: 12vw;
+    text-align: center;
+    font: normal normal normal 16px/20px Varela Round;
+    letter-spacing: 0px;
+    color: #2823FD;
+    opacity: 1;
+    margin-top: 1.3vw;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+}
+
+@media (max-width:768px) {
+    .impact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    .general {
+        display: flex;
+        flex-direction: column;
+        margin-right: 11vw;
+        margin-left: 6vw;
+    }
+
+    .header {
+        font-size: 5rem;
+        width: 90vw;
+        height: 20vh;
+    }
+
+    .forms>h1 {
+        font-size: 2.5rem;
+    }
+
+    .forms>p {
+        margin-top: 2vh;
+        font-size: 1.5rem;
+    }
+
+    .input {
+        margin-top: 9vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .initials {
+        margin-top: 1vh;
+        margin-right: 5vw;
+    }
+
+    #name,
+    #email {
+        width: 80vw;
+        height: 5vh;
+    }
+
+    #button {
+        width: 80vw;
+        height: 5vh;
+        margin-right: 5vw;
+        margin-top: 2vh;
+    }
+
+
+
+
+}

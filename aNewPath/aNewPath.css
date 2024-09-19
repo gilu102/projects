@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.path {
+    background-image: url("Path 15.png");
+    background-size: 100vw 30vw;
+    background-repeat: no-repeat;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.path>h1 {
+    text-align: right;
+    font: normal normal bold 86px/113px Assistant;
+    letter-spacing: 0px;
+    color: #D3E10E;
+    opacity: 1;
+}
+
+.path>p {
+    text-align: center;
+    font: normal normal normal 20px/26px Assistant;
+    letter-spacing: 0px;
+    color: #F9F9F9;
+    opacity: 1;
+}
+
+label {
+
+    font: normal normal bold 16px/21px Assistant;
+    letter-spacing: 0px;
+    color: #011560;
+    opacity: 1;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-top: 2vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    align-items: end;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 166px;
+    height: 50px;
+    background: #D3E10E 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: center;
+    font: normal normal bold 22px/30px Assistant;
+    letter-spacing: 0.33px;
+    color: #011560;
+    opacity: 1;
+    font-size: 1.5vw;
+    border: 0;
+    margin-top: 1vw;
+}
+
+#name {
+    width: 418px;
+    height: 50px;
+    background: #bbb2b288 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+    border-bottom: 5px solid #D3E10E;
+}
+
+#email {
+    width: 418px;
+    height: 50px;
+    background: #bbb2b288 0% 0% no-repeat padding-box;
+    opacity: 1;
+    border: 0;
+    border-bottom: 5px solid #D3E10E;
+}
+
+@media (max-width:768px) {
+    .path {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .path>h1 {
+        margin-top: 5vh;
+        font-size: 2rem;
+
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        direction: rtl;
+    }
+
+    #name,
+    #email {
+        width: 80vw;
+        height: 6vh;
+    }
+
+    .inputs>div {
+        margin-top: 3vh;
+    }
+
+    button {
+        width: 80vw;
+        height: 6vh;
+        font-size: 1.5rem;
+    }
+}

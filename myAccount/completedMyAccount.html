@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col-sm-4,
+        .col-sm-8 {
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+
+            .col-sm-4,
+            .col-sm-8 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            table {
+                width: 100%;
+                font-size: 14px;
+            }
+
+            h1.display-1 {
+                font-size: 2rem;
+            }
+
+            .form-control {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .form-floating label,
+            .form-floating input {
+                font-size: 14px;
+            }
+
+            h1.display-1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <h1 class="display-1 text-primary">
+                MY<i class="text-secondary fa-solid fa-chart-pie"></i>ACCOUNT
+            </h1>
+        </div>
+        <div class="row">
+            <div class="alert alert-secondary" id="balance">balance: 0</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <select id="type" class="form-select" aria-label="Default select example">
+                    <option selected value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <div class="form-floating my-3">
+                    <input type="text" class="form-control" id="description" placeholder="Description" />
+                    <label for="description">Description</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="amount" placeholder="0" />
+                    <label for="amount">Amount</label>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" onclick="addNewAction()">ADD</button>
+            </div>
+            <div class="col-sm-8">
+                <table class="table table-striped">
+                    <thead>
+                        <th class="col-sm-5">Description</th>
+                        <th class="col-sm-5">Amount</th>
+                    </thead>
+                    <tbody id="actionTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class action {
+            constructor(type, description, amount) {
+                this.type = type;
+                this.description = description;
+                this.amount = amount;
+                this.id = Math.floor(Math.random() * 1001);
+            }
+        }
+
+        class actionManager {
+            constructor() {
+                this.actions = this.loadActions();
+                this.balance = this.calcBalance();
+            }
+
+            addAction(action) {
+                this.actions.push(action);
+                this.balance = this.calcBalance();
+                this.saveActions();
+                document.getElementById("balance").innerText = `balance: ${this.balance.toFixed(2)}`;
+            }
+
+            deleteAction(id) {
+                this.actions = this.actions.filter((action) => action.id !== id);
+                this.balance = this.calcBalance();
+                this.saveActions();
+                document.getElementById("balance").innerText = `balance: ${this.balance.toFixed(2)}`;
+            }
+
+            updateAction(id, newAmount) {
+                let index = this.actions.findIndex((action) => action.id == id);
+                this.actions[index].amount = newAmount;
+                this.balance = this.calcBalance();
+                this.saveActions();
+                document.getElementById("balance").innerText = `balance: ${this.balance.toFixed(2)}`;
+            }
+
+            calcBalance() {
+                let balance = 0;
+                for (let action of this.actions) {
+                    if (action.type === "income") {
+                        balance += action.amount;
+                    } else if (action.type === "expense") {
+                        balance -= action.amount;
+                    }
+                }
+                return balance;
+            }
+
+            saveActions() {
+                sessionStorage.setItem('actions', JSON.stringify(this.actions));
+            }
+
+            loadActions() {
+                const savedActions = sessionStorage.getItem('actions');
+                return savedActions ? JSON.parse(savedActions) : [];
+            }
+        }
+
+        const manager = new actionManager();
+
+        window.addNewAction = function addNewAction() {
+            let type = document.getElementById("type").value;
+            let description = document.getElementById("description").value;
+            let amount = parseFloat(document.getElementById("amount").value);
+
+            if (isNaN(amount)) {
+                alert("Please enter a number.");
+                return;
+            }
+
+            let newAction = new action(type, description, amount);
+            manager.addAction(newAction);
+
+            addActionToTable(newAction);
+        };
+
+        function addActionToTable(action) {
+            let table = document.getElementById("actionTable");
+            let row = table.insertRow();
+
+            let descriptionCell = row.insertCell(0);
+            let amountCell = row.insertCell(1);
+            let editCell = row.insertCell(2);
+            let deleteCell = row.insertCell(3);
+
+            descriptionCell.innerText = action.description;
+            amountCell.innerText = action.amount.toFixed(2);
+
+            editCell.innerHTML = '<i class="fa-regular fa-pen-to-square text-success"></i>';
+            deleteCell.innerHTML = '<i class="fa-solid fa-trash-can text-danger"></i>';
+
+            deleteCell.addEventListener('click', function () {
+                let confirmDelete = confirm("Are you sure you want to remove this from your balance?");
+                if (confirmDelete) {
+                    row.remove();
+                    manager.deleteAction(action.id);
+                }
+            });
+
+            editCell.addEventListener('click', function () {
+                let newAmount = prompt("Enter new amount: ", amountCell.innerText);
+                if (newAmount !== null) {
+                    newAmount = parseFloat(newAmount);
+                    if (!isNaN(newAmount)) {
+                        amountCell.innerText = newAmount.toFixed(2);
+                        manager.updateAction(action.id, newAmount);
+                    } else {
+                        alert("Please enter a valid number.");
+                    }
+                }
+            });
+        }
+
+
+        window.onload = function () {
+            const actions = manager.loadActions();
+            actions.forEach(action => addActionToTable(action));
+            document.getElementById("balance").innerText = `balance: ${manager.balance.toFixed(2)}`;
+            console.log("Actions loaded", actions);
+        };
+    </script>
+</body>
+
+</html>
